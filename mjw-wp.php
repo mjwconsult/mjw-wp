@@ -23,4 +23,5 @@ function mjw_wp_upgrader_process_complete( $upgrader_object, $options ) {
   // Some bulk updates of plugins cause rewrite_rules (permalinks) to be broken.
   // This should provide a workaround/fix
   delete_option('civicrm_rules_flushed');
+  flush_rewrite_rules();
 }
