@@ -4,10 +4,13 @@
  * Plugin URI: https://mjw.pt
  * Description: Management, configuration and customisation provided by MJW
  * Author: MJW Consulting
- * Version: 1.0
+ * Version: 1.0.1
  * Author URI: https://mjw.pt
  * License: AGPL3
  */
+
+if ( !defined('DISABLE_WP_CRON') )
+  define( 'DISABLE_WP_CRON', true );
 
 // Use REST API for mailing URLs - Description: Do not use extern paths use REST API
 add_filter( 'civi_wp_rest/plugin/replace_mailing_tracking_urls', '__return_true' );
